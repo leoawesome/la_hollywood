@@ -176,6 +176,34 @@
   .win{border-left:3px solid var(--brass);background:var(--brass-wash);padding:.9rem 1rem;margin:0 0 1.15rem}
   .win p{color:var(--ink)}
 
+  /* ---------- film recipes ---------- */
+  .recipe{background:var(--surface);padding:1.1rem 1.05rem;margin-top:1.1rem;box-shadow:var(--shadow)}
+  .recipe-h{display:flex;flex-wrap:wrap;gap:.4rem .6rem;align-items:baseline}
+  .recipe h3{font-size:1.02rem;font-weight:700;margin:0;flex:1 1 auto}
+  .slot{
+    font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.1em;
+    color:var(--paper);background:var(--ink);padding:.22rem .45rem;border-radius:2px;
+    flex:0 0 auto;
+  }
+  .rwhen{
+    font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--brass);
+    margin:.4rem 0 0;
+  }
+  .rwhy{margin:.55rem 0 0;font-size:.88rem;color:var(--ink-2)}
+  .rwhy b{color:var(--ink);font-weight:700}
+  .rset{margin:.9rem 0 0}
+  .rset div{
+    display:grid;grid-template-columns:1fr auto;gap:.7rem;align-items:baseline;
+    padding:.36rem 0;border-bottom:1px solid var(--rule);
+  }
+  .rset div:last-child{border-bottom:none}
+  .rset dt{font-size:.8rem;color:var(--ink-3);line-height:1.5}
+  .rset dd{
+    margin:0;font-family:var(--mono);font-size:.8rem;font-weight:500;color:var(--ink);
+    text-align:right;font-variant-numeric:tabular-nums;line-height:1.5;
+  }
+  .rset .base dd{color:var(--brass);font-weight:700}
+
   table{width:100%;border-collapse:collapse;margin-top:1.1rem;font-size:.9rem}
   th,td{text-align:left;padding:.55rem .4rem;border-bottom:1px solid var(--rule)}
   th{font-size:.68rem;font-weight:700;letter-spacing:.08em;color:var(--ink-3)}
@@ -463,7 +491,7 @@
 
   <div class="panel">
     <h3>胶片模拟</h3>
-    <p>大道和所有建筑用 <b>Classic Chrome</b> — 能压住石材和招牌漆面，不会拍成糖水。墓室里面用 <b>Acros + 红滤镜</b>。晚上 6 点切 <b>Nostalgic Neg</b>，它能吃住黄金时刻又不会整片发橘。</p>
+    <p>不用现场翻菜单 —— 三套完整配方在下面「三套配方」那一节,存进 C1 / C2 / C3,按时段直接切格：<b>C1 早上外景、C2 中午室内、C3 黄金 + 蓝调</b>。</p>
 
     <h3>23mm 的问题</h3>
     <p>你这颗等效 35mm，<b>拍人偏广</b>，凑近拍脸会变形。拍她的特写一律开<b>数码增距到 50mm</b>；拍建筑外墙、中庭、圆顶再回原生 23mm。</p>
@@ -472,10 +500,99 @@
     <p><b>早上开放阴影：</b>f/5.6、ISO 160、<span class="mono">+0.3 EV</span> — 她在阴影里、背景是亮石材，测光一定会把脸压暗。</p>
     <p><b>Union Station 室内：</b>f/2、ISO 800、<span class="mono">1/60</span>。窗户进来的光很硬，让她侧对窗、别正对。</p>
     <p><b>Griffith 黄金时刻：</b>f/2，<b>按脸曝光</b>，天空稍微过一点没关系。从西边打逆光，圆顶放她背后。</p>
-    <p><b>蓝调时刻、没三脚架：</b>f/2、ISO 1600、<span class="mono">1/60</span>。手肘撑平台栏杆，剩下交给机身防抖。连拍，回头挑最实的那张。</p>
+    <p><b>蓝调时刻、没三脚架：</b>f/2、ISO 1600、<span class="mono">1/60</span>。手肘撑平台栏杆，剩下交给机身防抖。连拍，回头挑最实的那张 —— <b>先把 C3 的 Clarity 归零</b>，不然连拍会被处理卡住。</p>
 
     <h3>要带的东西</h3>
     <p>两人的水、吸油纸、小扇子、充电宝、备用电池，还有山顶那件外套。<b>一套衣服、14 小时、87°F — 真正的对手是热，不是光。</b></p>
+  </div>
+
+  <h2>三套配方 — 存进 C1 / C2 / C3</h2>
+
+  <div class="panel">
+    <p><b>存法：</b>Q 键 → 长按任一格 → <b>EDIT/SAVE CUSTOM SETTING</b> → 选 C1 / C2 / C3 → 逐项照下面填。<b>白平衡偏移（Red / Blue）必须在同一个自定义里一起存</b>，不然切回来会丢。X100VI 有 C1–C7,三套还剩四格。</p>
+    <p><b>一个坑先说：</b>Clarity 不是零成本 —— 开了之后每张要多处理约 1 秒,<b>连拍会卡</b>。所以蓝调时刻那套（C3）Clarity 归零,专门留给连拍。</p>
+  </div>
+
+  <div class="recipe">
+    <div class="recipe-h">
+      <h3>Kodachrome 64</h3>
+      <span class="slot">C1</span>
+    </div>
+    <p class="rwhen">7:30–9:50 · 大道外墙、手印中庭、Capitol Records</p>
+    <p class="rwhy">底片是 Classic Chrome,但整套调完之后跟直接切 CC 模式是两回事 —— <b>Daylight 白平衡 +2R / −5B</b> 把柯达那种偏青的冷调压出来,<b>Clarity +3</b> 给石材和招牌漆面咬合力。这套是为<b>晴天直射光</b>做的,今天早上正好。</p>
+    <dl class="rset">
+      <div class="base"><dt>Film Simulation</dt><dd>Classic Chrome</dd></div>
+      <div><dt>Grain Effect</dt><dd>Weak / Small</dd></div>
+      <div><dt>Color Chrome Effect</dt><dd>Strong</dd></div>
+      <div><dt>Color Chrome FX Blue</dt><dd>OFF</dd></div>
+      <div><dt>White Balance</dt><dd>Daylight · +2R / −5B</dd></div>
+      <div><dt>Dynamic Range</dt><dd>DR200</dd></div>
+      <div><dt>Highlight</dt><dd>0</dd></div>
+      <div><dt>Shadow</dt><dd>+0.5</dd></div>
+      <div><dt>Color</dt><dd>+2</dd></div>
+      <div><dt>Sharpness</dt><dd>+1</dd></div>
+      <div><dt>High ISO NR</dt><dd>−4</dd></div>
+      <div><dt>Clarity</dt><dd>+3</dd></div>
+      <div><dt>ISO</dt><dd>Auto · 上限 6400</dd></div>
+      <div><dt>曝光补偿</dt><dd>0 至 +2/3</dd></div>
+    </dl>
+  </div>
+
+  <div class="recipe">
+    <div class="recipe-h">
+      <h3>Kodak Plus-X 125</h3>
+      <span class="slot">C2</span>
+    </div>
+    <p class="rwhen">10:15–14:25 · Union Station 候车厅、Bradbury 天井、Biltmore 大堂</p>
+    <p class="rwhy">室内换黑白<b>不是为了文艺,是为了解决一个真问题</b> —— 这三个地方全是钨丝灯 + 天窗日光混光,彩色拍出来一半橙一半蓝,现场没法救。黑白直接把这个问题删掉,剩下的全是光线、大理石纹理和锻铁线条,正好是这几栋楼真正好看的部分。Acros 的颗粒是按 ISO 和曝光<b>算出来</b>的,不是贴图,越暗越有味。</p>
+    <dl class="rset">
+      <div class="base"><dt>Film Simulation</dt><dd>Acros（+Ye / +R / +G 皆可）</dd></div>
+      <div><dt>Monochromatic Color</dt><dd>WC 0 / MG 0（关）</dd></div>
+      <div><dt>Grain Effect</dt><dd>Weak / Large</dd></div>
+      <div><dt>Color Chrome Effect</dt><dd>Strong</dd></div>
+      <div><dt>White Balance</dt><dd>Daylight · +9R / +9B</dd></div>
+      <div><dt>Dynamic Range</dt><dd>DR200</dd></div>
+      <div><dt>Highlight</dt><dd>−1</dd></div>
+      <div><dt>Shadow</dt><dd>+1</dd></div>
+      <div><dt>Sharpness</dt><dd>−1</dd></div>
+      <div><dt>High ISO NR</dt><dd>−4</dd></div>
+      <div><dt>Clarity</dt><dd>+2</dd></div>
+      <div><dt>ISO</dt><dd>Auto · 上限 6400</dd></div>
+      <div><dt>曝光补偿</dt><dd>−1/3 至 −2/3</dd></div>
+    </dl>
+    <p class="rwhy"><b>滤镜选哪个：</b>Union Station 和 Biltmore 用 <b>+Ye</b>（正常反差,肤色最自然）；Bradbury 的天窗顶用 <b>+R</b>,天空和玻璃会更透。人脸特写不要用 +R,会把皮肤压得太白。</p>
+  </div>
+
+  <div class="recipe">
+    <div class="recipe-h">
+      <h3>Nostalgia Negative</h3>
+      <span class="slot">C3</span>
+    </div>
+    <p class="rwhen">18:10–19:45 · Griffith 黄金时刻 + 蓝调时刻</p>
+    <p class="rwhy">Nostalgic Neg 底片,仿七十年代美式彩色印相。<b>DR400</b> 是为了逆光 —— 你会把太阳放在她背后,这档能同时留住天空和脸。<b>Color +4</b> 让斜阳打在天文台白色圆顶上的暖色出得来,<b>Clarity −3</b> 反过来把皮肤放软。整套是这一天最重要那 90 分钟专用的。</p>
+    <dl class="rset">
+      <div class="base"><dt>Film Simulation</dt><dd>Nostalgic Neg.</dd></div>
+      <div><dt>Grain Effect</dt><dd>Strong / Small</dd></div>
+      <div><dt>Color Chrome Effect</dt><dd>Strong</dd></div>
+      <div><dt>Color Chrome FX Blue</dt><dd>Weak</dd></div>
+      <div><dt>White Balance</dt><dd>Daylight · +3R / −3B</dd></div>
+      <div><dt>Dynamic Range</dt><dd>DR400</dd></div>
+      <div><dt>Highlight</dt><dd>−1</dd></div>
+      <div><dt>Shadow</dt><dd>+1</dd></div>
+      <div><dt>Color</dt><dd>+4</dd></div>
+      <div><dt>Sharpness</dt><dd>−1</dd></div>
+      <div><dt>High ISO NR</dt><dd>−4</dd></div>
+      <div><dt>Clarity</dt><dd>−3</dd></div>
+      <div><dt>ISO</dt><dd>Auto · 上限 6400</dd></div>
+      <div><dt>曝光补偿</dt><dd>按脸测光 · 天空过一点没关系</dd></div>
+    </dl>
+    <p class="rwhy"><b>19:11 日落之后改两项就行：</b>Clarity 改 <b>0</b>（解开连拍卡顿）、ISO 上限提到 <b>12800</b>。城市灯火亮起来那 25 分钟全靠连拍捡最实的一张,没有三脚架,别让机器在那儿转圈。</p>
+  </div>
+
+  <div class="panel">
+    <h3>备用第四套（想要更冷、更电影感的夜景）</h3>
+    <p>如果蓝调时刻拍下来觉得太暖,换 <b>Classic Negative</b> 底片这一套：<span class="mono">WB Auto · +4R / −4B · DR200 · Grain Strong/Large · Color Chrome OFF · CC FX Blue Weak · Color +3 · Sharpness −4 · Highlight +1 · Shadow 0 · High ISO NR −4</span>。反差更硬、蓝更沉,城市灯火会更像电影调,肤色也还干净。存 C4。</p>
+    <p><b>提醒：</b>X-Trans V 用 Classic Negative 时 Color Chrome FX Blue 要设 <b>Weak</b>；用 Classic Chrome 时设 <b>OFF</b> —— 五代机的蓝比四代深,这两个数字不能互抄。</p>
   </div>
 
   <h2>花费 — 两人合计</h2>
