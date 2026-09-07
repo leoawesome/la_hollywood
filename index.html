@@ -1,499 +1,498 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hollywood Call Sheet</title>
-<meta name="description" content="Old Hollywood photo day — Monday, September 7, 2026. Burbank base, Hollywood Boulevard to Griffith Observatory.">
+<title>好莱坞拍摄通告单 Hollywood Call Sheet</title>
+<meta name="description" content="老好莱坞风格拍摄日 — 2026 年 9 月 7 日星期一。伯班克出发，好莱坞大道到格里菲斯天文台。">
 <meta name="theme-color" content="#16171c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Archivo:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
   :root{
     --paper:#f5f4f0;
     --surface:#ebe9e2;
-    --surface-2:#e2dfd5;
     --ink:#1b1c22;
-    --ink-2:#4a4c56;
-    --ink-3:#767884;
+    --ink-2:#43454f;
+    --ink-3:#71737f;
     --rule:#d3d0c6;
     --brass:#8a6a16;
     --brass-bright:#a9821f;
     --brass-wash:#efe7cf;
     --oxblood:#8c2b22;
     --oxblood-wash:#f2e0dd;
+    --chip:#fbfaf7;
     --shadow:0 1px 2px rgba(27,28,34,.06),0 8px 24px -12px rgba(27,28,34,.18);
     --display:"Limelight",Georgia,serif;
-    --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --body:"Archivo","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   }
   @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
-      --paper:#14151a;
-      --surface:#1c1e25;
-      --surface-2:#23262e;
-      --ink:#eae8e2;
-      --ink-2:#b3b2ac;
-      --ink-3:#84848d;
-      --rule:#2e313a;
-      --brass:#d9ae52;
-      --brass-bright:#e8c476;
-      --brass-wash:#2a2418;
-      --oxblood:#e2837a;
-      --oxblood-wash:#2c1c1a;
+      --paper:#14151a; --surface:#1c1e25; --ink:#eae8e2; --ink-2:#b6b5af;
+      --ink-3:#86868f; --rule:#2e313a; --brass:#d9ae52; --brass-bright:#e8c476;
+      --brass-wash:#2a2418; --oxblood:#e2837a; --oxblood-wash:#2c1c1a; --chip:#23262e;
       --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
     }
   }
   :root[data-theme="dark"]{
-    --paper:#14151a;
-    --surface:#1c1e25;
-    --surface-2:#23262e;
-    --ink:#eae8e2;
-    --ink-2:#b3b2ac;
-    --ink-3:#84848d;
-    --rule:#2e313a;
-    --brass:#d9ae52;
-    --brass-bright:#e8c476;
-    --brass-wash:#2a2418;
-    --oxblood:#e2837a;
-    --oxblood-wash:#2c1c1a;
+    --paper:#14151a; --surface:#1c1e25; --ink:#eae8e2; --ink-2:#b6b5af;
+    --ink-3:#86868f; --rule:#2e313a; --brass:#d9ae52; --brass-bright:#e8c476;
+    --brass-wash:#2a2418; --oxblood:#e2837a; --oxblood-wash:#2c1c1a; --chip:#23262e;
     --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
   }
 
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:var(--body);
-    font-size:16px;
-    line-height:1.55;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--body);font-size:16px;line-height:1.72;
     -webkit-font-smoothing:antialiased;
   }
   .wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem 4rem}
 
-  /* ---------- masthead ---------- */
   .mast{padding:2.1rem 0 1.3rem}
   .eyebrow{
     font-family:var(--mono);font-size:.66rem;font-weight:600;
-    letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-    margin:0 0 .85rem;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin:0 0 .85rem;
   }
   h1{
-    font-family:var(--display);
-    font-weight:400;
-    font-size:clamp(2.05rem,10vw,3.2rem);
-    line-height:.98;
-    letter-spacing:.005em;
-    margin:0;
-    text-wrap:balance;
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(2rem,9.5vw,3.1rem);line-height:1;margin:0;text-wrap:balance;
   }
-  .subhead{
-    margin:.7rem 0 0;color:var(--ink-2);font-size:.95rem;max-width:32em;
+  .h1-zh{
+    font-family:var(--body);font-weight:700;font-size:1.15rem;
+    letter-spacing:.06em;color:var(--ink-2);margin:.55rem 0 0;
   }
+  .subhead{margin:.8rem 0 0;color:var(--ink-2);font-size:.95rem;max-width:30em}
 
-  /* ---------- data strip ---------- */
   .strip{
-    display:grid;gap:.05rem 1.4rem;
-    grid-template-columns:1fr 1fr;
-    border-top:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
+    display:grid;gap:.05rem 1.4rem;grid-template-columns:1fr 1fr;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
     padding:.95rem 0;margin:1.4rem 0 0;
   }
   @media (min-width:34rem){.strip{grid-template-columns:repeat(3,1fr)}}
-  .cell{padding:.32rem 0}
+  .cell{padding:.3rem 0}
   .k{
-    display:block;font-family:var(--mono);font-size:.62rem;font-weight:600;
-    letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);
+    display:block;font-size:.68rem;font-weight:500;letter-spacing:.1em;
+    color:var(--ink-3);line-height:1.4;
   }
   .v{
-    display:block;font-family:var(--mono);font-size:.92rem;font-weight:500;
-    font-variant-numeric:tabular-nums;color:var(--ink);margin-top:.12rem;
+    display:block;font-family:var(--mono);font-size:.9rem;font-weight:500;
+    font-variant-numeric:tabular-nums;color:var(--ink);margin-top:.1rem;line-height:1.4;
   }
 
-  /* ---------- section heads ---------- */
   h2{
-    font-family:var(--body);font-size:.78rem;font-weight:700;
-    letter-spacing:.17em;text-transform:uppercase;color:var(--ink);
-    margin:2.6rem 0 1rem;padding-bottom:.5rem;
-    border-bottom:2px solid var(--ink);
+    font-size:.9rem;font-weight:700;letter-spacing:.15em;color:var(--ink);
+    margin:2.6rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--ink);
   }
 
-  /* ---------- notice ---------- */
   .notice{
-    background:var(--oxblood-wash);
-    border-left:3px solid var(--oxblood);
+    background:var(--oxblood-wash);border-left:3px solid var(--oxblood);
     padding:.95rem 1.05rem;margin:1.6rem 0 0;
   }
   .notice-t{
-    font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.16em;
-    text-transform:uppercase;color:var(--oxblood);margin:0 0 .55rem;
+    font-size:.72rem;font-weight:700;letter-spacing:.13em;
+    color:var(--oxblood);margin:0 0 .55rem;
   }
-  .notice ul{margin:0;padding-left:1.05rem}
-  .notice li{margin:.3rem 0;font-size:.9rem;color:var(--ink-2)}
-  .notice li b{color:var(--ink);font-weight:600}
+  .notice ul{margin:0;padding-left:1.1rem}
+  .notice li{margin:.42rem 0;font-size:.9rem;color:var(--ink-2)}
+  .notice li b{color:var(--ink);font-weight:700}
 
-  /* ---------- run of show ---------- */
+  /* ---------- stops ---------- */
   .stop{
-    display:grid;gap:.15rem 1.15rem;
-    grid-template-columns:1fr;
-    padding:1.25rem 0;
-    border-bottom:1px solid var(--rule);
+    display:grid;gap:.2rem 1.15rem;grid-template-columns:1fr;
+    padding:1.3rem 0;border-bottom:1px solid var(--rule);
   }
-  @media (min-width:34rem){
-    .stop{grid-template-columns:5.4rem 1fr;gap:0 1.4rem}
-  }
+  @media (min-width:34rem){.stop{grid-template-columns:5.6rem 1fr;gap:0 1.4rem}}
   .when{
     font-family:var(--mono);font-size:.85rem;font-weight:600;
-    font-variant-numeric:tabular-nums;color:var(--brass);
-    letter-spacing:-.01em;padding-top:.15rem;
+    font-variant-numeric:tabular-nums;color:var(--brass);padding-top:.2rem;
   }
-  .when span{display:block;color:var(--ink-3);font-weight:400;font-size:.76rem}
-  .what h3{
-    font-size:1.06rem;font-weight:600;margin:0;line-height:1.28;text-wrap:balance;
+  .when span{display:block;color:var(--ink-3);font-weight:400;font-size:.74rem}
+  .what h3{font-size:1.08rem;font-weight:700;margin:0;line-height:1.45;text-wrap:balance}
+
+  /* map chips — the tappable place names */
+  .maps{
+    list-style:none;margin:.6rem 0 0;padding:0;
+    display:flex;flex-wrap:wrap;gap:.45rem;
   }
-  .addr{
-    font-family:var(--mono);font-size:.78rem;color:var(--ink-3);
-    margin:.28rem 0 0;word-break:break-word;
+  .maps a{
+    display:inline-flex;align-items:center;gap:.38rem;
+    min-height:44px;padding:.4rem .7rem;
+    background:var(--chip);border:1px solid var(--rule);border-radius:3px;
+    font-family:var(--mono);font-size:.78rem;line-height:1.25;
+    color:var(--ink);text-decoration:none;
   }
-  .notes{margin:.7rem 0 0;display:grid;gap:.42rem}
-  .note{display:grid;grid-template-columns:3.6rem 1fr;gap:.7rem;align-items:baseline}
+  .maps a:active{background:var(--brass-wash);border-color:var(--brass)}
+  .maps a:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+  .maps svg{flex:0 0 auto;width:11px;height:11px;fill:var(--brass)}
+  .maps .num{
+    font-size:.68rem;color:var(--ink-3);font-variant-numeric:tabular-nums;
+  }
+
+  .notes{margin:.75rem 0 0;display:grid;gap:.48rem}
+  .note{display:grid;grid-template-columns:3.9rem 1fr;gap:.7rem;align-items:baseline}
   .note dt{
-    font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.13em;
-    text-transform:uppercase;color:var(--brass);padding-top:.22rem;
+    font-size:.68rem;font-weight:700;letter-spacing:.06em;
+    color:var(--brass);padding-top:.28rem;
   }
   .note dd{margin:0;font-size:.9rem;color:var(--ink-2)}
-  .note dd b{color:var(--ink);font-weight:600}
+  .note dd b{color:var(--ink);font-weight:700}
   .note.warn dt{color:var(--oxblood)}
 
-  /* the one lifted stop: golden hour */
   .stop.peak{
-    background:var(--brass-wash);
-    border-bottom:1px solid var(--rule);
-    padding:1.25rem 1rem;
-    margin:0 -1rem;
+    background:var(--brass-wash);padding:1.3rem 1rem;margin:0 -1rem;
   }
-  @media (min-width:34rem){.stop.peak{padding:1.35rem 1.4rem;margin:0 -1.4rem}}
+  @media (min-width:34rem){.stop.peak{padding:1.4rem 1.4rem;margin:0 -1.4rem}}
   .stop.peak .when{color:var(--brass-bright)}
   .badge{
-    display:inline-block;font-family:var(--mono);font-size:.58rem;font-weight:600;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--paper);
-    background:var(--brass);padding:.18rem .42rem;border-radius:2px;
-    vertical-align:.14em;margin-left:.45rem;
+    display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.1em;
+    color:var(--paper);background:var(--brass);padding:.2rem .45rem;border-radius:2px;
+    vertical-align:.16em;margin-left:.4rem;
   }
-  .beats{margin:.75rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+  .beats{margin:.8rem 0 0;padding:0;list-style:none;display:grid;gap:.55rem}
   .beats li{
-    display:grid;grid-template-columns:4.9rem 1fr;gap:.7rem;
+    display:grid;grid-template-columns:4.4rem 1fr;gap:.7rem;
     font-size:.9rem;color:var(--ink-2);align-items:baseline;
   }
   .beats b{
     font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--ink);
     font-variant-numeric:tabular-nums;
   }
+  .drive{
+    font-family:var(--mono);font-size:.72rem;color:var(--ink-3);
+    margin:.55rem 0 0;
+  }
 
-  /* ---------- panels ---------- */
-  .panel{
-    background:var(--surface);
-    padding:1.15rem 1.1rem;margin-top:1.5rem;
-    box-shadow:var(--shadow);
-  }
-  .panel h3{
-    font-size:.96rem;font-weight:600;margin:0 0 .55rem;
-  }
+  .panel{background:var(--surface);padding:1.15rem 1.1rem;margin-top:1.5rem;box-shadow:var(--shadow)}
+  .panel h3{font-size:.98rem;font-weight:700;margin:0 0 .55rem}
   .panel h3:not(:first-child){margin-top:1.35rem;padding-top:1.35rem;border-top:1px solid var(--rule)}
   .panel p{margin:0;font-size:.9rem;color:var(--ink-2)}
   .panel p + p{margin-top:.5rem}
-  .panel b{color:var(--ink);font-weight:600}
-  .panel .mono{font-family:var(--mono);font-size:.82rem}
-  .win{
-    border-left:3px solid var(--brass);
-    background:var(--brass-wash);
-    padding:.85rem 1rem;margin:0 0 1.15rem;
-  }
+  .panel b{color:var(--ink);font-weight:700}
+  .mono{font-family:var(--mono);font-size:.84rem;font-variant-numeric:tabular-nums}
+  .win{border-left:3px solid var(--brass);background:var(--brass-wash);padding:.9rem 1rem;margin:0 0 1.15rem}
   .win p{color:var(--ink)}
 
-  /* ---------- money ---------- */
   table{width:100%;border-collapse:collapse;margin-top:1.1rem;font-size:.9rem}
-  th,td{text-align:left;padding:.5rem .4rem;border-bottom:1px solid var(--rule)}
-  th{
-    font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.13em;
-    text-transform:uppercase;color:var(--ink-3);
-  }
-  td:last-child,th:last-child{
-    text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;
-  }
+  th,td{text-align:left;padding:.55rem .4rem;border-bottom:1px solid var(--rule)}
+  th{font-size:.68rem;font-weight:700;letter-spacing:.08em;color:var(--ink-3)}
+  td:last-child,th:last-child{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
   tfoot td{font-weight:700;color:var(--ink);border-bottom:none;border-top:2px solid var(--ink)}
-  td small{display:block;color:var(--ink-3);font-size:.78rem}
+  td small{display:block;color:var(--ink-3);font-size:.78rem;line-height:1.5}
 
   footer{
     margin-top:2.6rem;padding-top:1.1rem;border-top:1px solid var(--rule);
-    font-family:var(--mono);font-size:.7rem;color:var(--ink-3);line-height:1.7;
+    font-size:.78rem;color:var(--ink-3);line-height:1.85;
   }
-  a{color:var(--brass);text-decoration-thickness:1px;text-underline-offset:2px}
-  a:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="mast">
-    <p class="eyebrow">Call sheet · Day 1 of 2</p>
+    <p class="eyebrow">Call sheet · 第 1 天 / 共 2 天</p>
     <h1>Hollywood Call Sheet</h1>
-    <p class="subhead">One outfit, old-Hollywood glamour, phone&nbsp;+&nbsp;Fuji X100VI. Out at first light, home before Universal day.</p>
+    <p class="h1-zh">好莱坞拍摄通告单</p>
+    <p class="subhead">一套造型，老好莱坞风格，手机 + 富士 X100VI。天亮出发，收工够早，第二天还要去环球影城。所有地点名称可点击，直接开 Google 地图导航。</p>
 
     <div class="strip">
-      <div class="cell"><span class="k">Date</span><span class="v">Mon 7 Sep 2026</span></div>
-      <div class="cell"><span class="k">Holiday</span><span class="v">Labor Day</span></div>
-      <div class="cell"><span class="k">Weather</span><span class="v">87°F · sunny</span></div>
-      <div class="cell"><span class="k">Sunrise</span><span class="v">6:31 am</span></div>
-      <div class="cell"><span class="k">Golden hour</span><span class="v">6:10–7:11 pm</span></div>
-      <div class="cell"><span class="k">Blue hour ends</span><span class="v">7:40 pm</span></div>
-      <div class="cell"><span class="k">Base</span><span class="v">The Tangerine</span></div>
-      <div class="cell"><span class="k">Call</span><span class="v">7:10 am</span></div>
-      <div class="cell"><span class="k">Wrap</span><span class="v">9:30 pm</span></div>
+      <div class="cell"><span class="k">日期</span><span class="v">2026-09-07 一</span></div>
+      <div class="cell"><span class="k">公共假期</span><span class="v">Labor Day</span></div>
+      <div class="cell"><span class="k">天气</span><span class="v">87°F 晴</span></div>
+      <div class="cell"><span class="k">日出</span><span class="v">6:31 am</span></div>
+      <div class="cell"><span class="k">黄金时刻</span><span class="v">6:10–7:11 pm</span></div>
+      <div class="cell"><span class="k">蓝调时刻结束</span><span class="v">7:40 pm</span></div>
+      <div class="cell"><span class="k">住宿</span><span class="v">The Tangerine</span></div>
+      <div class="cell"><span class="k">出发</span><span class="v">7:10 am</span></div>
+      <div class="cell"><span class="k">收工回房</span><span class="v">9:20 pm</span></div>
     </div>
 
     <div class="notice">
-      <p class="notice-t">Closed today — do not drive there</p>
+      <p class="notice-t">今天关门 — 别白跑</p>
       <ul>
-        <li><b>Griffith Observatory building</b> — closed every Monday. Grounds, terraces and lawn stay open and free, which is all this day needs.</li>
-        <li><b>Musso &amp; Frank Grill</b> — closed Sunday and Monday.</li>
-        <li><b>Hollywood Museum (Max Factor Building)</b> — closed Monday and Tuesday.</li>
-        <li><b>Warner Bros. Studio Tour</b> — closed Sept 8–9, so it is gone tomorrow too.</li>
-        <li><b>Academy Museum is open today</b> 10–6 — it closes Tuesdays, so today is the only chance this trip.</li>
+        <li><b>Griffith Observatory 主楼</b> — 每周一关闭。但户外平台、草坪、露台全天开放且免费，这一天要的就是外景，不影响。</li>
+        <li><b>Musso &amp; Frank Grill</b> — 周日、周一都关。老好莱坞餐厅的首选没了。</li>
+        <li><b>Hollywood Museum（Max Factor 大楼）</b> — 周一、周二关。</li>
+        <li><b>Warner Bros. Studio Tour</b> — 9 月 8–9 日停业，所以明天也去不了。</li>
+        <li><b>Academy Museum 今天开</b> 10:00–18:00，但周二关门 — 这趟只有今天能去。$25/人，属于可选。</li>
       </ul>
     </div>
   </header>
 
-  <h2>Run of show</h2>
+  <h2>行程</h2>
 
   <section class="stop">
-    <div class="when">7:10 am<span>15 min</span></div>
+    <div class="when">7:10 am<span>车程 15 分</span></div>
     <div class="what">
-      <h3>Roll out of Burbank</h3>
-      <p class="addr">3901 W Riverside Dr → 134 W → 101 S → exit Highland</p>
+      <h3>从伯班克出发</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Tangerine%20Hotel%2C%203901%20W%20Riverside%20Dr%2C%20Burbank%2C%20CA%2091505"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>The Tangerine</a></li>
+      </ul>
+      <p class="drive">134 W → 101 S → Highland Ave 出口</p>
       <dl class="notes">
-        <div class="note"><dt>Why now</dt><dd>Bread in the car. The whole point of this hour is an <b>empty Hollywood Boulevard</b> — the costumed characters and tour hawkers take the sidewalk by 10.</dd></div>
-        <div class="note"><dt>Park</dt><dd>Side streets off the Boulevard: <b>Orange Dr, Hawthorn Ave, Sycamore Ave, Yucca St</b>. Free today — see parking below.</dd></div>
+        <div class="note"><dt>为什么这么早</dt><dd>面包在车上吃。这一小时唯一的目的是<b>空无一人的好莱坞大道</b> — 10 点之后人行道就被扮装人偶和拉客的团队占满了。</dd></div>
+        <div class="note"><dt>停车</dt><dd>停大道旁的小街：<b>Orange Dr、Hawthorn Ave、Sycamore Ave、Yucca St</b>。今天免费，详见下面停车那段。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">7:30 am<span>1 h 45 m</span></div>
+    <div class="when">7:30 am<span>1 小时 45 分</span></div>
     <div class="what">
-      <h3>Hollywood Boulevard, on foot</h3>
-      <p class="addr">TCL Chinese Theatre 6925 · El Capitan 6838 · Egyptian 6712 · Roosevelt 7000 · Ovation Babylon Court</p>
+      <h3>好莱坞大道 — 步行拍摄</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=TCL%20Chinese%20Theatre%2C%206925%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>TCL Chinese Theatre</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=El%20Capitan%20Theatre%2C%206838%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>El Capitan Theatre</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Egyptian%20Theatre%2C%206712%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Egyptian Theatre</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Hollywood%20Roosevelt%2C%207000%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Hollywood Roosevelt</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Ovation%20Hollywood%2C%206801%20Hollywood%20Blvd%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Ovation Hollywood</a></li>
+      </ul>
       <dl class="notes">
-        <div class="note"><dt>Light</dt><dd>Sun is low in the east and the theatre facades sit on the south side of the street, so they are in <b>open shade</b> — even, flattering light with a bright stone backdrop.</dd></div>
-        <div class="note"><dt>Frames</dt><dd>Chinese Theatre forecourt pagoda and handprints with nobody in them. El Capitan's marquee. The Egyptian's sphinx courtyard. Roosevelt's Spanish Colonial lobby (painted beams, wrought iron) — quiet at 8 am. Babylon Court's arch frames the Hollywood Sign.</dd></div>
-        <div class="note warn"><dt>Note</dt><dd>The Roosevelt throws a <b>free pool party 1–7 pm today, 21+, with DJs</b>. Morning is your only calm window in that lobby.</dd></div>
-        <div class="note"><dt>Leave by</dt><dd>9:15 am. After that the sidewalk belongs to other people.</dd></div>
+        <div class="note"><dt>光线</dt><dd>太阳在东边很低，几家剧院都在街道南侧，所以正面全是<b>柔和的开放阴影</b> — 人脸受光均匀，背后是亮色石材。这是一天里最好拍人的光。</dd></div>
+        <div class="note"><dt>拍什么</dt><dd>Chinese Theatre 中庭的宝塔和手印，这个时间一个人都没有。El Capitan 的marquee 招牌。Egyptian Theatre 的狮身人面像中庭。Roosevelt 1927 年的西班牙殖民风大堂（彩绘横梁、铁艺），8 点很安静。Ovation 的 Babylon Court 拱门刚好框住 Hollywood Sign。</dd></div>
+        <div class="note warn"><dt>注意</dt><dd>Roosevelt 今天 <b>13:00–19:00 有免费泳池派对，21 岁以上，有 DJ</b>。大堂只有早上是安静的。</dd></div>
+        <div class="note"><dt>几点走</dt><dd>9:15 一定要走。之后人行道就不属于你们了。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">9:25 am<span>30 min</span></div>
+    <div class="when">9:25 am<span>25 分</span></div>
     <div class="what">
-      <h3>Hollywood &amp; Vine</h3>
-      <p class="addr">Capitol Records 1750 N Vine St · Pantages 6233 Hollywood Blvd · Frolic Room 6245</p>
+      <h3>Capitol Records 大楼</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Capitol%20Records%20Building%2C%201750%20N%20Vine%20St%2C%20Los%20Angeles%2C%20CA%2090028"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Capitol Records Building</a></li>
+      </ul>
+      <p class="drive">从 Highland 开过来 3 分钟 · 停 Argyle Ave 或 Vine St，今天免费</p>
       <dl class="notes">
-        <div class="note"><dt>Frames</dt><dd>The Capitol tower reads as a <b>stack of records</b> — shoot it white against morning sky from the Vine St sidewalk. Then the Pantages art-deco marquee and the Frolic Room's 1930s neon next door.</dd></div>
-        <div class="note"><dt>Park</dt><dd>Argyle Ave or Vine St, free today.</dd></div>
+        <div class="note"><dt>拍什么</dt><dd>整栋楼就是<b>一叠唱片</b>的造型。站 Vine St 人行道往上拍，白色楼身衬清晨蓝天。加上前面的棕榈树，10 分钟搞定一组。</dd></div>
+        <div class="note"><dt>已删掉</dt><dd>原本排的 Pantages 剧院和 Frolic Room 霓虹在这里 — 但它们是<b>夜景</b>，白天招牌不亮、外墙很平，白跑。要拍就晚上再来。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">10:05 am<span>1 h 10 m</span></div>
+    <div class="when">10:05 am<span>1 小时 15 分</span></div>
     <div class="what">
-      <h3>Hollywood Forever Cemetery</h3>
-      <p class="addr">6000 Santa Monica Blvd · open 8:30 am–5 pm · free lot inside the gates</p>
+      <h3>Hollywood Forever 墓园</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Hollywood%20Forever%20Cemetery%2C%206000%20Santa%20Monica%20Blvd%2C%20Los%20Angeles%2C%20CA%2090038"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Hollywood Forever Cemetery</a></li>
+      </ul>
+      <p class="drive">开放 8:30–17:00 · 大门进去里面有免费停车场</p>
       <dl class="notes">
-        <div class="note"><dt>Frames</dt><dd><b>Cathedral Mausoleum opens at 10:00</b> — marble, stained glass, Valentino's crypt, and cool air. Outside: the Douglas Fairbanks reflecting pool with its colonnade and palms mirrored, and the Paramount water tower rising behind the headstones.</dd></div>
-        <div class="note warn"><dt>Rules</dt><dd>Photos are fine for <b>private use only</b>. Keep any funeral in progress out of frame and out of earshot.</dd></div>
+        <div class="note"><dt>拍什么</dt><dd><b>Cathedral Mausoleum 10:00 开门</b> — 大理石、彩绘玻璃、Rudolph Valentino 的墓室，而且里面很凉。外面：Douglas Fairbanks 的倒影池，柱廊和棕榈树倒映在水面；再往后是 Paramount 的水塔立在墓碑上方。</dd></div>
+        <div class="note"><dt>为什么值得</dt><dd>这是全城最强的老好莱坞背景，而且免费。整趟行程里最被低估的一站。</dd></div>
+        <div class="note warn"><dt>规矩</dt><dd>拍照可以，但<b>仅限私人用途</b>。有葬礼在进行就绕开，不要入镜，也不要在附近说话。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">11:25 am<span>15 min</span></div>
+    <div class="when">11:55 am<span>1 小时</span></div>
     <div class="what">
-      <h3>Paramount's Bronson Gate</h3>
-      <p class="addr">5555 Melrose Ave — shoot from Bronson Ave, no ticket needed</p>
+      <h3>Union Station 联合车站</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Los%20Angeles%20Union%20Station%2C%20800%20N%20Alameda%20St%2C%20Los%20Angeles%2C%20CA%2090012"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Union Station</a></li>
+      </ul>
+      <p class="drive">墓园开过来 101 S 约 20 分钟 · 开放 4:00–1:00 · 免费进</p>
       <dl class="notes">
-        <div class="note"><dt>Frames</dt><dd>The wrought-iron arch, five minutes from the cemetery. One setup, then move.</dd></div>
+        <div class="note"><dt>为什么加这站</dt><dd>原本的行程<b>一个大气的室内场景都没有</b>。老好莱坞的华丽感在室内 — 大理石、铜饰、吊灯。好莱坞大道只给你外墙。1939 年的 Union Station 是全洛杉矶最好的室内取景地，而且免费、有空调。</dd></div>
+        <div class="note"><dt>拍什么</dt><dd>Grand Waiting Room：12 米高的手绘描金横梁、镶嵌大理石与陶砖地面、原装皮质长椅。还有售票大厅和两侧的庭院。</dd></div>
+        <div class="note warn"><dt>注意</dt><dd>是私人产业，<b>保安随时可以叫停</b>。别架三脚架，低调快拍，X100VI 这种小相机正好不会被当成商业拍摄。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">11:45 am<span>1 h 15 m</span></div>
+    <div class="when">1:10 pm<span>1 小时</span></div>
     <div class="what">
-      <h3>Lunch — Miceli's</h3>
-      <p class="addr">1646 N Las Palmas Ave · opens 11:30 am, Mon till 9:30 pm</p>
+      <h3>午餐 — Grand Central Market</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Grand%20Central%20Market%2C%20317%20S%20Broadway%2C%20Los%20Angeles%2C%20CA%2090013"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Grand Central Market</a></li>
+      </ul>
+      <p class="drive">车站开过来 8 分钟 · 每天 8:00–21:00</p>
       <dl class="notes">
-        <div class="note"><dt>Why</dt><dd>Oldest Italian in Hollywood, 1949. Chianti bottles hanging from the ceiling, red booths, dim — it is a photo location that happens to serve lunch, and the day's <b>first real air conditioning</b>.</dd></div>
-        <div class="note"><dt>Order</dt><dd>Share one large pizza and an antipasto. <b>≈ $40 for two.</b></dd></div>
-        <div class="note"><dt>Cheaper</dt><dd>In-N-Out, 7009 Sunset Blvd — ≈ $16 for two.</dd></div>
+        <div class="note"><dt>为什么</dt><dd>1917 年的老市场，几十个小摊，<b>便宜、能分着吃、不用点网红菜</b> — 完全符合你们的吃法。老霓虹招牌本身就是好背景。原本排的 Miceli's 已删掉，这里更划算。</dd></div>
+        <div class="note"><dt>怎么点</dt><dd>两个人买两三份分着吃就够。<b>约 $30。</b>不喝酒也完全没问题，摊位都是单点。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">1:00 pm<span>2 h</span></div>
+    <div class="when">2:20 pm<span>30 分</span></div>
     <div class="what">
-      <h3>Harsh-light block — stay indoors</h3>
-      <p class="addr">Amoeba Music 6200 Hollywood Blvd · Ovation Hollywood · Maru Coffee 1936 Hillhurst Ave</p>
+      <h3>Millennium Biltmore 大堂</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Millennium%20Biltmore%20Hotel%2C%20506%20S%20Grand%20Ave%2C%20Los%20Angeles%2C%20CA%2090071"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Millennium Biltmore</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Angels%20Flight%20Railway%2C%20351%20S%20Hill%20St%2C%20Los%20Angeles%2C%20CA%2090013"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Angels Flight（可选）</a></li>
+      </ul>
+      <p class="drive">酒店 24 小时开 · 大堂可以直接走进去</p>
       <dl class="notes">
-        <div class="note"><dt>Why</dt><dd>Overhead sun between 11 and 4 is the worst portrait light of the day and it is 87°F. Nothing is lost by sitting it out — <b>Amoeba is free, freezing, enormous</b>, and the record racks make good candid frames.</dd></div>
-        <div class="note"><dt>Optional</dt><dd>Academy Museum, 6067 Wilshire Blvd, open today 10–6, $25 each. Mirrored Oscars gallery and the glass sphere. Only paid stop on the sheet.</dd></div>
+        <div class="note"><dt>拍什么</dt><dd>1923 年建，<b>早期奥斯卡颁奖典礼办过八届</b>。描金文艺复兴风天花板、大楼梯 — 这是全城最像「老好莱坞颁奖夜」的场景。</dd></div>
+        <div class="note"><dt>顺路可选</dt><dd>Angels Flight 1901 年的橙色缆车，就在 Grand Central Market 对面上坡，单程 $1，两分钟，很上镜。时间够就顺手拍。</dd></div>
+        <div class="note warn"><dt>安全</dt><dd>Broadway 和 Hill St 一带能看到街友。白天人多没问题，但<b>不要往 Broadway 以东乱走</b>。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">3:15 pm<span>1 h</span></div>
+    <div class="when">3:30 pm<span>1 小时</span></div>
     <div class="what">
       <h3>Lake Hollywood Park</h3>
-      <p class="addr">3160 Canyon Lake Dr · free street parking 6 am–8 pm</p>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Lake%20Hollywood%20Park%2C%203160%20Canyon%20Lake%20Dr%2C%20Los%20Angeles%2C%20CA%2090068"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Lake Hollywood Park</a></li>
+      </ul>
+      <p class="drive">市区开过来约 25 分钟 · 街边免费停车 6:00–20:00</p>
       <dl class="notes">
-        <div class="note"><dt>Frames</dt><dd>Straight-on Hollywood Sign from a grass field — <b>no hike, no climb</b>. Sun is southwest by now, so the sign is front-lit. Put her in the pine shade with the sign behind.</dd></div>
-        <div class="note warn"><dt>Park</dt><dd>One side of Canyon Lake Dr is <b>15-minute only</b>, the other side is unlimited 6 am–8 pm. Read the sign before you walk away.</dd></div>
+        <div class="note"><dt>拍什么</dt><dd>草地上<b>正面直看 Hollywood Sign</b> — 不用爬山、不用走远。这是穿裙子还能把招牌拍大的唯一方法。</dd></div>
+        <div class="note"><dt>光线</dt><dd>这时太阳在西南，招牌是<b>正面受光</b>。人站松树阴影里，招牌放背景，反差刚好。</dd></div>
+        <div class="note warn"><dt>停车</dt><dd>Canyon Lake Dr 一侧是 <b>限停 15 分钟</b>，另一侧 6:00–20:00 不限时。走开之前先把牌子看清楚，这里真的拖车。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">4:30 pm<span>30 min</span></div>
+    <div class="when">5:15 pm<span>30 分</span></div>
     <div class="what">
-      <h3>Barnsdall Art Park</h3>
-      <p class="addr">4800 Hollywood Blvd · free · park open till 10 pm</p>
+      <h3>停 Greek Theatre，换接驳车上山</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Greek%20Theatre%20parking%2C%202700%20N%20Vermont%20Canyon%20Rd%2C%20Los%20Angeles%2C%20CA%2090027"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Greek Theatre 停车场</a></li>
+      </ul>
       <dl class="notes">
-        <div class="note"><dt>Frames</dt><dd>Olive grove on top of Olive Hill with Frank Lloyd Wright's <b>Hollyhock House</b> exterior and an elevated view over Hollywood. Real shade, on the way east to Griffith.</dd></div>
-        <div class="note"><dt>Note</dt><dd>House interior tours run Thursday–Sunday only. Exterior is the shot anyway.</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section class="stop">
-    <div class="when">5:15 pm<span>30 min</span></div>
-    <div class="what">
-      <h3>Park at the Greek, ride up</h3>
-      <p class="addr">Greek Theatre lot, 2700 N Vermont Canyon Rd → DASH Observatory shuttle</p>
-      <dl class="notes">
-        <div class="note"><dt>Why</dt><dd>No show at the Greek tonight, so <b>the lot is free</b>. The DASH runs to the Observatory's front lawn every 15–20 min, 50¢ each. Full reasoning in Parking below.</dd></div>
-        <div class="note warn"><dt>Timing</dt><dd>Be in the lot by 5:15. The sunset queue builds after 6.</dd></div>
+        <div class="note"><dt>为什么</dt><dd>今晚 Greek Theatre 没有演出，所以<b>停车场免费</b>。DASH 接驳车直接开到天文台前草坪，每人 50 美分，15–20 分钟一班。<b>这一招省 $40 和半小时找车位</b>，详见停车那段。</dd></div>
+        <div class="note warn"><dt>时间</dt><dd>5:15 之前要停好。6 点之后看日落的人潮就排起来了。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop peak">
-    <div class="when">5:45 pm<span>2 h</span></div>
+    <div class="when">5:45 pm<span>2 小时</span></div>
     <div class="what">
-      <h3>Griffith Observatory grounds <span class="badge">Best light</span></h3>
-      <p class="addr">2800 E Observatory Rd · building closed Mondays · grounds free and open</p>
+      <h3>Griffith Observatory 外景 <span class="badge">全天最好的光</span></h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Griffith%20Observatory%2C%202800%20E%20Observatory%20Rd%2C%20Los%20Angeles%2C%20CA%2090027"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Griffith Observatory</a></li>
+      </ul>
+      <p class="drive">周一主楼关闭 · 户外平台草坪全部开放且免费</p>
       <ul class="beats">
-        <li><b>5:45</b> Astronomers Monument and the front steps while the light is still high and clean.</li>
-        <li><b>6:10</b> Golden hour. West terrace first — Hollywood Sign over her shoulder. Then the front lawn with the white art-deco domes behind her, sun low and warm off the concrete.</li>
-        <li><b>7:11</b> Sunset.</li>
-        <li><b>7:11</b> Blue hour. City lights come up, sky goes cobalt behind the domes. <b>The best frames of the day are in these 25 minutes</b> — save card space and battery for them.</li>
-        <li><b>7:45</b> Walk down to the DASH stop.</li>
+        <li><b>5:45</b> Astronomers Monument 和正面台阶，光还高、还干净。</li>
+        <li><b>6:10</b> 黄金时刻。先去西侧平台 — Hollywood Sign 在她肩后。再回前草坪，白色装饰艺术圆顶做背景，斜阳从水泥地反上来。</li>
+        <li><b>7:11</b> 日落。</li>
+        <li><b>7:11</b> 蓝调时刻。城市灯火一片片亮起来，天空在白圆顶后面转成钴蓝。<b>全天最好的画面就在这 25 分钟</b> — 留够电和卡。</li>
+        <li><b>7:45</b> 走去 DASH 站下山。</li>
       </ul>
       <dl class="notes">
-        <div class="note"><dt>Bring</dt><dd>A light layer. It drops to about 71°F and the hilltop has wind off the basin.</dd></div>
+        <div class="note"><dt>带件外套</dt><dd>降到 71°F 左右，山顶从盆地方向来的风不小。她穿一整天同一套，这件很重要。</dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">8:10 pm<span>45 min</span></div>
+    <div class="when">8:10 pm<span>45 分</span></div>
     <div class="what">
-      <h3>Dinner — Zankou Chicken</h3>
-      <p class="addr">5065 W Sunset Blvd · open till midnight · 10 min from the Greek lot</p>
+      <h3>晚餐 — Zankou Chicken</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Zankou%20Chicken%2C%205065%20W%20Sunset%20Blvd%2C%20Los%20Angeles%2C%20CA%2090027"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Zankou Chicken</a></li>
+      </ul>
+      <p class="drive">Greek 停车场开过来 10 分钟 · 开到半夜 · 自带停车场</p>
       <dl class="notes">
-        <div class="note"><dt>Order</dt><dd>Half chicken, the <b>garlic paste</b>, hummus, tabbouleh, pita. Armenian rotisserie, no wait, all shareable. <b>≈ $28 for two.</b></dd></div>
+        <div class="note"><dt>怎么点</dt><dd>半只烤鸡、招牌<b>蒜蓉酱</b>、hummus、tabbouleh、pita。亚美尼亚炭烤，不用等位，全部能分。<b>约 $28。</b></dd></div>
       </dl>
     </div>
   </section>
 
   <section class="stop">
-    <div class="when">9:00 pm<span>20 min</span></div>
+    <div class="when">9:00 pm<span>车程 20 分</span></div>
     <div class="what">
-      <h3>Home</h3>
-      <p class="addr">Sunset Blvd → 101 N → 134 E → The Tangerine</p>
+      <h3>回酒店</h3>
+      <ul class="maps">
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Tangerine%20Hotel%2C%203901%20W%20Riverside%20Dr%2C%20Burbank%2C%20CA%2091505"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>The Tangerine</a></li>
+      </ul>
+      <p class="drive">Sunset Blvd → 101 N → 134 E</p>
       <dl class="notes">
-        <div class="note"><dt>Wrap</dt><dd>In by 9:30. Universal Studios opens early tomorrow and Tuesday is the quietest day of the month there — worth being rested for.</dd></div>
+        <div class="note"><dt>收工</dt><dd>9:20 进房。<b>明天周二是环球影城全月人最少的一天</b>（约 54% 拥挤度），值得睡饱去。</dd></div>
       </dl>
     </div>
   </section>
 
-  <h2>Parking</h2>
+  <h2>停车 — 一天要停 7 次</h2>
 
   <div class="panel">
     <div class="win">
-      <p><b>Today's free ride:</b> because it is Labor Day, Los Angeles does not enforce parking meters, posted time limits, or street sweeping. Street parking in Hollywood is free all day. One catch — if a sign reads <b>“Holidays Enforced”</b>, it means it. Glance at the meter screen before walking off.</p>
+      <p><b>今天的大便宜：</b>因为是 Labor Day，洛杉矶市<b>不执行路边计时表、限时停车、扫街限制</b>。好莱坞和市区的路边停车今天全天免费。唯一例外 — 牌子上写 <b>“Holidays Enforced”</b> 的就照罚。停好之前看一眼计时表屏幕。</p>
     </div>
 
-    <h3>Hollywood Boulevard</h3>
-    <p>Side streets: <b>Orange Dr, Hawthorn Ave, Sycamore Ave, Yucca St</b>. If they're full, Ovation Hollywood garage is <span class="mono">$25</span> daily max — or <span class="mono">$3</span> for four hours if you validate at the TCL Chinese Theatre box office.</p>
+    <p>先说清楚：这一天<b>不可能只停一次车</b>。整条路线横跨约 13 公里，分成 7 个停车段。好消息是其中 5 段今天不要钱。</p>
 
-    <h3>Hollywood Forever</h3>
-    <p>Free lot inside the gates. Enter off Santa Monica Blvd and drive in past the flower shop.</p>
+    <h3>1 · 好莱坞大道 <span class="mono">7:20–9:15 · 免费</span></h3>
+    <p>小街上停：<b>Orange Dr、Hawthorn Ave、Sycamore Ave、Yucca St</b>。都满的话 Ovation Hollywood 停车场上限 <span class="mono">$25</span>，或者在 TCL Chinese Theatre 售票处盖章，4 小时 <span class="mono">$3</span>。</p>
 
-    <h3>Lake Hollywood Park</h3>
-    <p>Free on Canyon Lake Dr, <span class="mono">6 am–8 pm</span> on the unlimited side. The opposite side is 15-minute only and they do tow.</p>
+    <h3>2 · Capitol Records <span class="mono">9:25–9:50 · 免费</span></h3>
+    <p>Argyle Ave 或 Vine St 路边。从 Highland 开过来 3 分钟 — 别走过去，0.7 英里，留她的脚力给后面。</p>
 
-    <h3>Griffith Observatory — do not drive to the top</h3>
-    <p>The Observatory Road lot is <b><span class="mono">$10 per hour</span>, card only</b>, enforced Monday 12 pm–10 pm, and the rate goes <em>up</em> on holidays. Four hours is roughly <span class="mono">$40</span>, and on Labor Day at sunset you will still circle for half an hour.</p>
-    <p>Instead: park free in the <b>Greek Theatre lot, 2700 N Vermont Canyon Rd</b> — there is no performance there tonight — and take the <b>DASH Observatory shuttle</b> to the front lawn. <span class="mono">50¢</span> cash, <span class="mono">35¢</span> with a TAP card, every 15–20 minutes, 10 am–10 pm. It runs on Mondays even though the building is shut. <b>Last bus down from the Observatory leaves at 10 pm.</b></p>
+    <h3>3 · Hollywood Forever <span class="mono">10:05–11:20 · 免费</span></h3>
+    <p>Santa Monica Blvd 上大门开进去，过花店就是免费停车场。</p>
+
+    <h3>4 · Union Station <span class="mono">11:55–12:55 · 约 $10</span></h3>
+    <p>车站自己的停车场要钱，这是今天唯一躲不掉的停车费。周边 Alameda St 路边今天免费但车位很少，绕两圈没有就直接进场，别为了 $10 耗掉拍摄时间。</p>
+
+    <h3>5 · Grand Central Market 一带 <span class="mono">13:10–14:50 · 免费</span></h3>
+    <p>Broadway、Hill St、Bunker Hill 路边计时表今天不执行。停一次可以走完市场 + Angels Flight + Biltmore（Biltmore 在 0.6 公里外的上坡，走得动就走，不然开过去）。</p>
+
+    <h3>6 · Lake Hollywood Park <span class="mono">15:30–16:30 · 免费</span></h3>
+    <p>Canyon Lake Dr 不限时那一侧，6:00–20:00。另一侧限停 15 分钟，会拖车。</p>
+
+    <h3>7 · Griffith — 千万不要开上山 <span class="mono">17:15–19:50 · 免费</span></h3>
+    <p>Observatory Rd 的停车场是 <b><span class="mono">$10 / 小时</span>，只收卡</b>，周一 12:00–22:00 执行，而且<b>假期还会涨价</b>。停 4 小时差不多 <span class="mono">$40</span>，而 Labor Day 的日落时段你照样要绕半小时才有位。</p>
+    <p>正确做法：免费停在 <b>Greek Theatre 停车场，2700 N Vermont Canyon Rd</b>（今晚没演出），然后坐 <b>DASH Observatory</b> 接驳车上去，直接到前草坪。<span class="mono">50¢</span> 现金，用 TAP 卡 <span class="mono">35¢</span>，15–20 分钟一班，10:00–22:00 运行。周一主楼关门它照跑。<b>最后一班从天文台下山是 22:00。</b></p>
   </div>
 
-  <h2>Shooting notes — X100VI</h2>
+  <h2>拍摄笔记 — X100VI</h2>
 
   <div class="panel">
-    <h3>Film simulations</h3>
-    <p><b>Classic Chrome</b> for the Boulevard and all the architecture — it holds the stone and the marquee paint without going candy. <b>Acros + red filter</b> inside the mausoleum. Switch to <b>Nostalgic Neg</b> at 6 pm; it carries golden hour without tipping orange.</p>
+    <h3>胶片模拟</h3>
+    <p>大道和所有建筑用 <b>Classic Chrome</b> — 能压住石材和招牌漆面，不会拍成糖水。墓室里面用 <b>Acros + 红滤镜</b>。晚上 6 点切 <b>Nostalgic Neg</b>，它能吃住黄金时刻又不会整片发橘。</p>
 
-    <h3>The 23mm problem</h3>
-    <p>Your lens is a 35mm equivalent — wide for portraits, and it will stretch her features if you fill the frame. Use the <b>digital teleconverter at 50mm</b> for every close-up of her, and stay native 23mm for facades, the forecourt and the domes.</p>
+    <h3>23mm 的问题</h3>
+    <p>你这颗等效 35mm，<b>拍人偏广</b>，凑近拍脸会变形。拍她的特写一律开<b>数码增距到 50mm</b>；拍建筑外墙、中庭、圆顶再回原生 23mm。</p>
 
-    <h3>Exposure by block</h3>
-    <p><b>Morning, open shade:</b> f/5.6, ISO 160, <span class="mono">+0.3 EV</span> — she's shaded against bright stone, so the meter will underexpose her face.</p>
-    <p><b>Golden hour, Griffith:</b> f/2, expose for her face and let the sky clip a little. Backlight from the west with the domes behind her.</p>
-    <p><b>Blue hour, no tripod:</b> f/2, ISO 1600, <span class="mono">1/60</span>. Brace on the terrace railing and let IBIS do the rest. Shoot bursts and keep the sharpest.</p>
+    <h3>各时段曝光</h3>
+    <p><b>早上开放阴影：</b>f/5.6、ISO 160、<span class="mono">+0.3 EV</span> — 她在阴影里、背景是亮石材，测光一定会把脸压暗。</p>
+    <p><b>Union Station 室内：</b>f/2、ISO 800、<span class="mono">1/60</span>。窗户进来的光很硬，让她侧对窗、别正对。</p>
+    <p><b>Griffith 黄金时刻：</b>f/2，<b>按脸曝光</b>，天空稍微过一点没关系。从西边打逆光，圆顶放她背后。</p>
+    <p><b>蓝调时刻、没三脚架：</b>f/2、ISO 1600、<span class="mono">1/60</span>。手肘撑平台栏杆，剩下交给机身防抖。连拍，回头挑最实的那张。</p>
 
-    <h3>Bag</h3>
-    <p>Water for both of you, blotting sheets, a hand fan, a phone battery pack, a spare camera battery, and one light layer for the hilltop. It is one outfit and a fourteen-hour day at 87°F — the heat is the real adversary, not the light.</p>
+    <h3>要带的东西</h3>
+    <p>两人的水、吸油纸、小扇子、充电宝、备用电池，还有山顶那件外套。<b>一套衣服、14 小时、87°F — 真正的对手是热，不是光。</b></p>
   </div>
 
-  <h2>Money, for two</h2>
+  <h2>花费 — 两人合计</h2>
 
   <table>
     <thead>
-      <tr><th scope="col">Line</th><th scope="col">Cost</th></tr>
+      <tr><th scope="col">项目</th><th scope="col">金额</th></tr>
     </thead>
     <tbody>
-      <tr><td>Street parking<small>Labor Day — not enforced</small></td><td>$0</td></tr>
-      <tr><td>Greek Theatre lot<small>No show tonight</small></td><td>$0</td></tr>
-      <tr><td>DASH shuttle<small>Round trip, two people</small></td><td>$2</td></tr>
-      <tr><td>Lunch — Miceli's<small>Shared pizza + antipasto</small></td><td>$40</td></tr>
-      <tr><td>Iced coffee</td><td>$12</td></tr>
-      <tr><td>Dinner — Zankou<small>Half chicken, sides, pita</small></td><td>$28</td></tr>
-      <tr><td>Every photo location<small>All eleven of them</small></td><td>$0</td></tr>
+      <tr><td>路边停车 × 5 段<small>Labor Day 不执行计时表</small></td><td>$0</td></tr>
+      <tr><td>Union Station 停车场<small>今天唯一躲不掉的停车费</small></td><td>$10</td></tr>
+      <tr><td>Greek Theatre 停车场<small>今晚没演出</small></td><td>$0</td></tr>
+      <tr><td>DASH 接驳车<small>两人来回</small></td><td>$2</td></tr>
+      <tr><td>午餐 Grand Central Market<small>两三份分着吃</small></td><td>$30</td></tr>
+      <tr><td>咖啡 / 冰饮</td><td>$12</td></tr>
+      <tr><td>晚餐 Zankou<small>半只鸡 + 配菜 + pita</small></td><td>$28</td></tr>
+      <tr><td>所有拍摄点门票<small>全部 10 个地点</small></td><td>$0</td></tr>
     </tbody>
     <tfoot>
-      <tr><td>Day total</td><td>$82</td></tr>
+      <tr><td>全天合计</td><td>$82</td></tr>
     </tfoot>
   </table>
 
   <footer>
-    Hours, closures, sun times and parking rates verified 6 Sep 2026 for Mon 7 Sep 2026.<br>
-    Sunrise 6:31 am · sunset 7:11 pm · forecast high 87°F, mostly sunny.<br>
-    Re-check Griffith's DASH times and the Greek Theatre schedule before you leave the hotel.
+    营业时间、休馆日、日照时间、停车费率于 2026-09-06 为 2026-09-07（星期一）核实。<br>
+    日出 6:31 · 日落 7:11 · 预报最高 87°F、晴。<br>
+    出门前再确认两件事：Greek Theatre 今晚确实没演出，以及 DASH 接驳车的班次。
   </footer>
 
 </div>
