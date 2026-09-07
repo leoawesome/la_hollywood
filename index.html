@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hollywood Call Sheet</title>
+<meta name="description" content="Old Hollywood photo day — Monday, September 7, 2026. Burbank base, Hollywood Boulevard to Griffith Observatory.">
+<meta name="theme-color" content="#16171c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Limelight&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#f5f4f0;
+    --surface:#ebe9e2;
+    --surface-2:#e2dfd5;
+    --ink:#1b1c22;
+    --ink-2:#4a4c56;
+    --ink-3:#767884;
+    --rule:#d3d0c6;
+    --brass:#8a6a16;
+    --brass-bright:#a9821f;
+    --brass-wash:#efe7cf;
+    --oxblood:#8c2b22;
+    --oxblood-wash:#f2e0dd;
+    --shadow:0 1px 2px rgba(27,28,34,.06),0 8px 24px -12px rgba(27,28,34,.18);
+    --display:"Limelight",Georgia,serif;
+    --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#14151a;
+      --surface:#1c1e25;
+      --surface-2:#23262e;
+      --ink:#eae8e2;
+      --ink-2:#b3b2ac;
+      --ink-3:#84848d;
+      --rule:#2e313a;
+      --brass:#d9ae52;
+      --brass-bright:#e8c476;
+      --brass-wash:#2a2418;
+      --oxblood:#e2837a;
+      --oxblood-wash:#2c1c1a;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14151a;
+    --surface:#1c1e25;
+    --surface-2:#23262e;
+    --ink:#eae8e2;
+    --ink-2:#b3b2ac;
+    --ink-3:#84848d;
+    --rule:#2e313a;
+    --brass:#d9ae52;
+    --brass-bright:#e8c476;
+    --brass-wash:#2a2418;
+    --oxblood:#e2837a;
+    --oxblood-wash:#2c1c1a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.7);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:44rem;margin:0 auto;padding:0 1.15rem 4rem}
+
+  /* ---------- masthead ---------- */
+  .mast{padding:2.1rem 0 1.3rem}
+  .eyebrow{
+    font-family:var(--mono);font-size:.66rem;font-weight:600;
+    letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
+    margin:0 0 .85rem;
+  }
+  h1{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(2.05rem,10vw,3.2rem);
+    line-height:.98;
+    letter-spacing:.005em;
+    margin:0;
+    text-wrap:balance;
+  }
+  .subhead{
+    margin:.7rem 0 0;color:var(--ink-2);font-size:.95rem;max-width:32em;
+  }
+
+  /* ---------- data strip ---------- */
+  .strip{
+    display:grid;gap:.05rem 1.4rem;
+    grid-template-columns:1fr 1fr;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    padding:.95rem 0;margin:1.4rem 0 0;
+  }
+  @media (min-width:34rem){.strip{grid-template-columns:repeat(3,1fr)}}
+  .cell{padding:.32rem 0}
+  .k{
+    display:block;font-family:var(--mono);font-size:.62rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);
+  }
+  .v{
+    display:block;font-family:var(--mono);font-size:.92rem;font-weight:500;
+    font-variant-numeric:tabular-nums;color:var(--ink);margin-top:.12rem;
+  }
+
+  /* ---------- section heads ---------- */
+  h2{
+    font-family:var(--body);font-size:.78rem;font-weight:700;
+    letter-spacing:.17em;text-transform:uppercase;color:var(--ink);
+    margin:2.6rem 0 1rem;padding-bottom:.5rem;
+    border-bottom:2px solid var(--ink);
+  }
+
+  /* ---------- notice ---------- */
+  .notice{
+    background:var(--oxblood-wash);
+    border-left:3px solid var(--oxblood);
+    padding:.95rem 1.05rem;margin:1.6rem 0 0;
+  }
+  .notice-t{
+    font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--oxblood);margin:0 0 .55rem;
+  }
+  .notice ul{margin:0;padding-left:1.05rem}
+  .notice li{margin:.3rem 0;font-size:.9rem;color:var(--ink-2)}
+  .notice li b{color:var(--ink);font-weight:600}
+
+  /* ---------- run of show ---------- */
+  .stop{
+    display:grid;gap:.15rem 1.15rem;
+    grid-template-columns:1fr;
+    padding:1.25rem 0;
+    border-bottom:1px solid var(--rule);
+  }
+  @media (min-width:34rem){
+    .stop{grid-template-columns:5.4rem 1fr;gap:0 1.4rem}
+  }
+  .when{
+    font-family:var(--mono);font-size:.85rem;font-weight:600;
+    font-variant-numeric:tabular-nums;color:var(--brass);
+    letter-spacing:-.01em;padding-top:.15rem;
+  }
+  .when span{display:block;color:var(--ink-3);font-weight:400;font-size:.76rem}
+  .what h3{
+    font-size:1.06rem;font-weight:600;margin:0;line-height:1.28;text-wrap:balance;
+  }
+  .addr{
+    font-family:var(--mono);font-size:.78rem;color:var(--ink-3);
+    margin:.28rem 0 0;word-break:break-word;
+  }
+  .notes{margin:.7rem 0 0;display:grid;gap:.42rem}
+  .note{display:grid;grid-template-columns:3.6rem 1fr;gap:.7rem;align-items:baseline}
+  .note dt{
+    font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--brass);padding-top:.22rem;
+  }
+  .note dd{margin:0;font-size:.9rem;color:var(--ink-2)}
+  .note dd b{color:var(--ink);font-weight:600}
+  .note.warn dt{color:var(--oxblood)}
+
+  /* the one lifted stop: golden hour */
+  .stop.peak{
+    background:var(--brass-wash);
+    border-bottom:1px solid var(--rule);
+    padding:1.25rem 1rem;
+    margin:0 -1rem;
+  }
+  @media (min-width:34rem){.stop.peak{padding:1.35rem 1.4rem;margin:0 -1.4rem}}
+  .stop.peak .when{color:var(--brass-bright)}
+  .badge{
+    display:inline-block;font-family:var(--mono);font-size:.58rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--paper);
+    background:var(--brass);padding:.18rem .42rem;border-radius:2px;
+    vertical-align:.14em;margin-left:.45rem;
+  }
+  .beats{margin:.75rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+  .beats li{
+    display:grid;grid-template-columns:4.9rem 1fr;gap:.7rem;
+    font-size:.9rem;color:var(--ink-2);align-items:baseline;
+  }
+  .beats b{
+    font-family:var(--mono);font-size:.78rem;font-weight:600;color:var(--ink);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- panels ---------- */
+  .panel{
+    background:var(--surface);
+    padding:1.15rem 1.1rem;margin-top:1.5rem;
+    box-shadow:var(--shadow);
+  }
+  .panel h3{
+    font-size:.96rem;font-weight:600;margin:0 0 .55rem;
+  }
+  .panel h3:not(:first-child){margin-top:1.35rem;padding-top:1.35rem;border-top:1px solid var(--rule)}
+  .panel p{margin:0;font-size:.9rem;color:var(--ink-2)}
+  .panel p + p{margin-top:.5rem}
+  .panel b{color:var(--ink);font-weight:600}
+  .panel .mono{font-family:var(--mono);font-size:.82rem}
+  .win{
+    border-left:3px solid var(--brass);
+    background:var(--brass-wash);
+    padding:.85rem 1rem;margin:0 0 1.15rem;
+  }
+  .win p{color:var(--ink)}
+
+  /* ---------- money ---------- */
+  table{width:100%;border-collapse:collapse;margin-top:1.1rem;font-size:.9rem}
+  th,td{text-align:left;padding:.5rem .4rem;border-bottom:1px solid var(--rule)}
+  th{
+    font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink-3);
+  }
+  td:last-child,th:last-child{
+    text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  }
+  tfoot td{font-weight:700;color:var(--ink);border-bottom:none;border-top:2px solid var(--ink)}
+  td small{display:block;color:var(--ink-3);font-size:.78rem}
+
+  footer{
+    margin-top:2.6rem;padding-top:1.1rem;border-top:1px solid var(--rule);
+    font-family:var(--mono);font-size:.7rem;color:var(--ink-3);line-height:1.7;
+  }
+  a{color:var(--brass);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <p class="eyebrow">Call sheet · Day 1 of 2</p>
+    <h1>Hollywood Call Sheet</h1>
+    <p class="subhead">One outfit, old-Hollywood glamour, phone&nbsp;+&nbsp;Fuji X100VI. Out at first light, home before Universal day.</p>
+
+    <div class="strip">
+      <div class="cell"><span class="k">Date</span><span class="v">Mon 7 Sep 2026</span></div>
+      <div class="cell"><span class="k">Holiday</span><span class="v">Labor Day</span></div>
+      <div class="cell"><span class="k">Weather</span><span class="v">87°F · sunny</span></div>
+      <div class="cell"><span class="k">Sunrise</span><span class="v">6:31 am</span></div>
+      <div class="cell"><span class="k">Golden hour</span><span class="v">6:10–7:11 pm</span></div>
+      <div class="cell"><span class="k">Blue hour ends</span><span class="v">7:40 pm</span></div>
+      <div class="cell"><span class="k">Base</span><span class="v">The Tangerine</span></div>
+      <div class="cell"><span class="k">Call</span><span class="v">7:10 am</span></div>
+      <div class="cell"><span class="k">Wrap</span><span class="v">9:30 pm</span></div>
+    </div>
+
+    <div class="notice">
+      <p class="notice-t">Closed today — do not drive there</p>
+      <ul>
+        <li><b>Griffith Observatory building</b> — closed every Monday. Grounds, terraces and lawn stay open and free, which is all this day needs.</li>
+        <li><b>Musso &amp; Frank Grill</b> — closed Sunday and Monday.</li>
+        <li><b>Hollywood Museum (Max Factor Building)</b> — closed Monday and Tuesday.</li>
+        <li><b>Warner Bros. Studio Tour</b> — closed Sept 8–9, so it is gone tomorrow too.</li>
+        <li><b>Academy Museum is open today</b> 10–6 — it closes Tuesdays, so today is the only chance this trip.</li>
+      </ul>
+    </div>
+  </header>
+
+  <h2>Run of show</h2>
+
+  <section class="stop">
+    <div class="when">7:10 am<span>15 min</span></div>
+    <div class="what">
+      <h3>Roll out of Burbank</h3>
+      <p class="addr">3901 W Riverside Dr → 134 W → 101 S → exit Highland</p>
+      <dl class="notes">
+        <div class="note"><dt>Why now</dt><dd>Bread in the car. The whole point of this hour is an <b>empty Hollywood Boulevard</b> — the costumed characters and tour hawkers take the sidewalk by 10.</dd></div>
+        <div class="note"><dt>Park</dt><dd>Side streets off the Boulevard: <b>Orange Dr, Hawthorn Ave, Sycamore Ave, Yucca St</b>. Free today — see parking below.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">7:30 am<span>1 h 45 m</span></div>
+    <div class="what">
+      <h3>Hollywood Boulevard, on foot</h3>
+      <p class="addr">TCL Chinese Theatre 6925 · El Capitan 6838 · Egyptian 6712 · Roosevelt 7000 · Ovation Babylon Court</p>
+      <dl class="notes">
+        <div class="note"><dt>Light</dt><dd>Sun is low in the east and the theatre facades sit on the south side of the street, so they are in <b>open shade</b> — even, flattering light with a bright stone backdrop.</dd></div>
+        <div class="note"><dt>Frames</dt><dd>Chinese Theatre forecourt pagoda and handprints with nobody in them. El Capitan's marquee. The Egyptian's sphinx courtyard. Roosevelt's Spanish Colonial lobby (painted beams, wrought iron) — quiet at 8 am. Babylon Court's arch frames the Hollywood Sign.</dd></div>
+        <div class="note warn"><dt>Note</dt><dd>The Roosevelt throws a <b>free pool party 1–7 pm today, 21+, with DJs</b>. Morning is your only calm window in that lobby.</dd></div>
+        <div class="note"><dt>Leave by</dt><dd>9:15 am. After that the sidewalk belongs to other people.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">9:25 am<span>30 min</span></div>
+    <div class="what">
+      <h3>Hollywood &amp; Vine</h3>
+      <p class="addr">Capitol Records 1750 N Vine St · Pantages 6233 Hollywood Blvd · Frolic Room 6245</p>
+      <dl class="notes">
+        <div class="note"><dt>Frames</dt><dd>The Capitol tower reads as a <b>stack of records</b> — shoot it white against morning sky from the Vine St sidewalk. Then the Pantages art-deco marquee and the Frolic Room's 1930s neon next door.</dd></div>
+        <div class="note"><dt>Park</dt><dd>Argyle Ave or Vine St, free today.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">10:05 am<span>1 h 10 m</span></div>
+    <div class="what">
+      <h3>Hollywood Forever Cemetery</h3>
+      <p class="addr">6000 Santa Monica Blvd · open 8:30 am–5 pm · free lot inside the gates</p>
+      <dl class="notes">
+        <div class="note"><dt>Frames</dt><dd><b>Cathedral Mausoleum opens at 10:00</b> — marble, stained glass, Valentino's crypt, and cool air. Outside: the Douglas Fairbanks reflecting pool with its colonnade and palms mirrored, and the Paramount water tower rising behind the headstones.</dd></div>
+        <div class="note warn"><dt>Rules</dt><dd>Photos are fine for <b>private use only</b>. Keep any funeral in progress out of frame and out of earshot.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">11:25 am<span>15 min</span></div>
+    <div class="what">
+      <h3>Paramount's Bronson Gate</h3>
+      <p class="addr">5555 Melrose Ave — shoot from Bronson Ave, no ticket needed</p>
+      <dl class="notes">
+        <div class="note"><dt>Frames</dt><dd>The wrought-iron arch, five minutes from the cemetery. One setup, then move.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">11:45 am<span>1 h 15 m</span></div>
+    <div class="what">
+      <h3>Lunch — Miceli's</h3>
+      <p class="addr">1646 N Las Palmas Ave · opens 11:30 am, Mon till 9:30 pm</p>
+      <dl class="notes">
+        <div class="note"><dt>Why</dt><dd>Oldest Italian in Hollywood, 1949. Chianti bottles hanging from the ceiling, red booths, dim — it is a photo location that happens to serve lunch, and the day's <b>first real air conditioning</b>.</dd></div>
+        <div class="note"><dt>Order</dt><dd>Share one large pizza and an antipasto. <b>≈ $40 for two.</b></dd></div>
+        <div class="note"><dt>Cheaper</dt><dd>In-N-Out, 7009 Sunset Blvd — ≈ $16 for two.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">1:00 pm<span>2 h</span></div>
+    <div class="what">
+      <h3>Harsh-light block — stay indoors</h3>
+      <p class="addr">Amoeba Music 6200 Hollywood Blvd · Ovation Hollywood · Maru Coffee 1936 Hillhurst Ave</p>
+      <dl class="notes">
+        <div class="note"><dt>Why</dt><dd>Overhead sun between 11 and 4 is the worst portrait light of the day and it is 87°F. Nothing is lost by sitting it out — <b>Amoeba is free, freezing, enormous</b>, and the record racks make good candid frames.</dd></div>
+        <div class="note"><dt>Optional</dt><dd>Academy Museum, 6067 Wilshire Blvd, open today 10–6, $25 each. Mirrored Oscars gallery and the glass sphere. Only paid stop on the sheet.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">3:15 pm<span>1 h</span></div>
+    <div class="what">
+      <h3>Lake Hollywood Park</h3>
+      <p class="addr">3160 Canyon Lake Dr · free street parking 6 am–8 pm</p>
+      <dl class="notes">
+        <div class="note"><dt>Frames</dt><dd>Straight-on Hollywood Sign from a grass field — <b>no hike, no climb</b>. Sun is southwest by now, so the sign is front-lit. Put her in the pine shade with the sign behind.</dd></div>
+        <div class="note warn"><dt>Park</dt><dd>One side of Canyon Lake Dr is <b>15-minute only</b>, the other side is unlimited 6 am–8 pm. Read the sign before you walk away.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">4:30 pm<span>30 min</span></div>
+    <div class="what">
+      <h3>Barnsdall Art Park</h3>
+      <p class="addr">4800 Hollywood Blvd · free · park open till 10 pm</p>
+      <dl class="notes">
+        <div class="note"><dt>Frames</dt><dd>Olive grove on top of Olive Hill with Frank Lloyd Wright's <b>Hollyhock House</b> exterior and an elevated view over Hollywood. Real shade, on the way east to Griffith.</dd></div>
+        <div class="note"><dt>Note</dt><dd>House interior tours run Thursday–Sunday only. Exterior is the shot anyway.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">5:15 pm<span>30 min</span></div>
+    <div class="what">
+      <h3>Park at the Greek, ride up</h3>
+      <p class="addr">Greek Theatre lot, 2700 N Vermont Canyon Rd → DASH Observatory shuttle</p>
+      <dl class="notes">
+        <div class="note"><dt>Why</dt><dd>No show at the Greek tonight, so <b>the lot is free</b>. The DASH runs to the Observatory's front lawn every 15–20 min, 50¢ each. Full reasoning in Parking below.</dd></div>
+        <div class="note warn"><dt>Timing</dt><dd>Be in the lot by 5:15. The sunset queue builds after 6.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop peak">
+    <div class="when">5:45 pm<span>2 h</span></div>
+    <div class="what">
+      <h3>Griffith Observatory grounds <span class="badge">Best light</span></h3>
+      <p class="addr">2800 E Observatory Rd · building closed Mondays · grounds free and open</p>
+      <ul class="beats">
+        <li><b>5:45</b> Astronomers Monument and the front steps while the light is still high and clean.</li>
+        <li><b>6:10</b> Golden hour. West terrace first — Hollywood Sign over her shoulder. Then the front lawn with the white art-deco domes behind her, sun low and warm off the concrete.</li>
+        <li><b>7:11</b> Sunset.</li>
+        <li><b>7:11</b> Blue hour. City lights come up, sky goes cobalt behind the domes. <b>The best frames of the day are in these 25 minutes</b> — save card space and battery for them.</li>
+        <li><b>7:45</b> Walk down to the DASH stop.</li>
+      </ul>
+      <dl class="notes">
+        <div class="note"><dt>Bring</dt><dd>A light layer. It drops to about 71°F and the hilltop has wind off the basin.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">8:10 pm<span>45 min</span></div>
+    <div class="what">
+      <h3>Dinner — Zankou Chicken</h3>
+      <p class="addr">5065 W Sunset Blvd · open till midnight · 10 min from the Greek lot</p>
+      <dl class="notes">
+        <div class="note"><dt>Order</dt><dd>Half chicken, the <b>garlic paste</b>, hummus, tabbouleh, pita. Armenian rotisserie, no wait, all shareable. <b>≈ $28 for two.</b></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="stop">
+    <div class="when">9:00 pm<span>20 min</span></div>
+    <div class="what">
+      <h3>Home</h3>
+      <p class="addr">Sunset Blvd → 101 N → 134 E → The Tangerine</p>
+      <dl class="notes">
+        <div class="note"><dt>Wrap</dt><dd>In by 9:30. Universal Studios opens early tomorrow and Tuesday is the quietest day of the month there — worth being rested for.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <h2>Parking</h2>
+
+  <div class="panel">
+    <div class="win">
+      <p><b>Today's free ride:</b> because it is Labor Day, Los Angeles does not enforce parking meters, posted time limits, or street sweeping. Street parking in Hollywood is free all day. One catch — if a sign reads <b>“Holidays Enforced”</b>, it means it. Glance at the meter screen before walking off.</p>
+    </div>
+
+    <h3>Hollywood Boulevard</h3>
+    <p>Side streets: <b>Orange Dr, Hawthorn Ave, Sycamore Ave, Yucca St</b>. If they're full, Ovation Hollywood garage is <span class="mono">$25</span> daily max — or <span class="mono">$3</span> for four hours if you validate at the TCL Chinese Theatre box office.</p>
+
+    <h3>Hollywood Forever</h3>
+    <p>Free lot inside the gates. Enter off Santa Monica Blvd and drive in past the flower shop.</p>
+
+    <h3>Lake Hollywood Park</h3>
+    <p>Free on Canyon Lake Dr, <span class="mono">6 am–8 pm</span> on the unlimited side. The opposite side is 15-minute only and they do tow.</p>
+
+    <h3>Griffith Observatory — do not drive to the top</h3>
+    <p>The Observatory Road lot is <b><span class="mono">$10 per hour</span>, card only</b>, enforced Monday 12 pm–10 pm, and the rate goes <em>up</em> on holidays. Four hours is roughly <span class="mono">$40</span>, and on Labor Day at sunset you will still circle for half an hour.</p>
+    <p>Instead: park free in the <b>Greek Theatre lot, 2700 N Vermont Canyon Rd</b> — there is no performance there tonight — and take the <b>DASH Observatory shuttle</b> to the front lawn. <span class="mono">50¢</span> cash, <span class="mono">35¢</span> with a TAP card, every 15–20 minutes, 10 am–10 pm. It runs on Mondays even though the building is shut. <b>Last bus down from the Observatory leaves at 10 pm.</b></p>
+  </div>
+
+  <h2>Shooting notes — X100VI</h2>
+
+  <div class="panel">
+    <h3>Film simulations</h3>
+    <p><b>Classic Chrome</b> for the Boulevard and all the architecture — it holds the stone and the marquee paint without going candy. <b>Acros + red filter</b> inside the mausoleum. Switch to <b>Nostalgic Neg</b> at 6 pm; it carries golden hour without tipping orange.</p>
+
+    <h3>The 23mm problem</h3>
+    <p>Your lens is a 35mm equivalent — wide for portraits, and it will stretch her features if you fill the frame. Use the <b>digital teleconverter at 50mm</b> for every close-up of her, and stay native 23mm for facades, the forecourt and the domes.</p>
+
+    <h3>Exposure by block</h3>
+    <p><b>Morning, open shade:</b> f/5.6, ISO 160, <span class="mono">+0.3 EV</span> — she's shaded against bright stone, so the meter will underexpose her face.</p>
+    <p><b>Golden hour, Griffith:</b> f/2, expose for her face and let the sky clip a little. Backlight from the west with the domes behind her.</p>
+    <p><b>Blue hour, no tripod:</b> f/2, ISO 1600, <span class="mono">1/60</span>. Brace on the terrace railing and let IBIS do the rest. Shoot bursts and keep the sharpest.</p>
+
+    <h3>Bag</h3>
+    <p>Water for both of you, blotting sheets, a hand fan, a phone battery pack, a spare camera battery, and one light layer for the hilltop. It is one outfit and a fourteen-hour day at 87°F — the heat is the real adversary, not the light.</p>
+  </div>
+
+  <h2>Money, for two</h2>
+
+  <table>
+    <thead>
+      <tr><th scope="col">Line</th><th scope="col">Cost</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Street parking<small>Labor Day — not enforced</small></td><td>$0</td></tr>
+      <tr><td>Greek Theatre lot<small>No show tonight</small></td><td>$0</td></tr>
+      <tr><td>DASH shuttle<small>Round trip, two people</small></td><td>$2</td></tr>
+      <tr><td>Lunch — Miceli's<small>Shared pizza + antipasto</small></td><td>$40</td></tr>
+      <tr><td>Iced coffee</td><td>$12</td></tr>
+      <tr><td>Dinner — Zankou<small>Half chicken, sides, pita</small></td><td>$28</td></tr>
+      <tr><td>Every photo location<small>All eleven of them</small></td><td>$0</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>Day total</td><td>$82</td></tr>
+    </tfoot>
+  </table>
+
+  <footer>
+    Hours, closures, sun times and parking rates verified 6 Sep 2026 for Mon 7 Sep 2026.<br>
+    Sunrise 6:31 am · sunset 7:11 pm · forecast high 87°F, mostly sunny.<br>
+    Re-check Griffith's DASH times and the Greek Theatre schedule before you leave the hotel.
+  </footer>
+
+</div>
+</body>
+</html>
